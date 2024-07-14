@@ -1,0 +1,31 @@
+div.box2 {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    background-color: #fcfc03;
+  }
+  body{
+    padding: 50px;
+    margin: 20px;
+    align-self: center;
+    align-content: center;
+    border: 15px solid rgb(255, 43, 1);
+    background-color: #f6fe02;
+    align-content: center;
+  }
+  div.amey {
+    align-self: center;
+    width: 500px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+  div.main{
+    align-self: center;
+    background-color:#77fc03;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }

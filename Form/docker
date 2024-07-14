@@ -1,0 +1,7 @@
+FROM ubuntu
+MAINTAINER amey (ameypande2709@gmail.com) 
+ date
+ RUN apt-get update
+ RUN apt-get install -y nginx
+ ENTRYPOINT [“/usr/sbin/nginx”,”-g”,”daemon off;”]
+ EXPOSE 80

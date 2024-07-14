@@ -1,0 +1,77 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PrintArray",
+            "request": "launch",
+            "mainClass": "PrintArray",
+            "projectName": "java programming_6a300036"
+        },
+        {
+            "type": "java",
+            "name": "leetcode",
+            "request": "launch",
+            "mainClass": "leetcode",
+            "projectName": "java programming_6a300036"
+        },
+        {
+            "type": "java",
+            "name": "Amey",
+            "request": "launch",
+            "mainClass": "Amey",
+            "projectName": "java programming_6a300036"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
+            "name": "Launch External Terminal",
+            "request": "launch",
+            "console": "externalTerminal",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
+            "request": "attach",
+            "name": "Attach by Process ID",
+            "processId": "${command:PickJavaProcess}"
+        },
+        {
+            "type": "java",
+            "name": "Attach",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of the debuggee>"
+        },
+        {
+            "type": "java",
+            "name": "Codechef",
+            "request": "launch",
+            "mainClass": "Codechef",
+            "projectName": "java programming_6a300036"
+        },
+        {
+            "type": "lldb",
+            "request": "attach",
+            "name": "Attach",
+            "program": "${"
+        }
+    ]
+}

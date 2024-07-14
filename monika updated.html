@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script>
+		function validateForm() {
+			var name = document.forms["registrationForm"]["name"].value;
+			var email = document.forms["registrationForm"]["email"].value;
+			var password = document.forms["registrationForm"]["password"].value;
+			var dob = document.forms["registrationForm"]["dob"].value;
+			var gender = document.forms["registrationForm"]["gender"].value;
+			var declaration = document.forms["registrationForm"]["declaration"].value;
+			
+			if (name == "") {
+				alert("Name must be filled out");
+				return false;
+			}
+			
+			if (email == "") {
+				alert("Email must be filled out");
+				return false;
+			}
+			
+			if (password == "") {
+				alert("Password must be filled out");
+				return false;
+			}
+			
+			if (dob == "") {
+				alert("Date of Birth must be filled out");
+				return false;
+			}
+			
+			if (gender == "") {
+				alert("Gender must be selected");
+				return false;
+			}
+			
+			if (declaration == "") {
+				alert("Declaration must be filled out");
+				return false;
+			}
+			
+			return true;
+		}
+
+		function calculateAge() {
+			const dob = new Date(document.getElementById("dob").value);
+
+        // Check if the date of birth is valid
+        if (isNaN(dob.getTime())) {
+          document.getElementById("result").textContent = "Invalid date of birth entered. Please enter a valid date.";
+          return;
+        }
+
+        // Calculate the difference between the current date and the date of birth in milliseconds
+        const ageInMs = Date.now() - dob.getTime();
+
+        // Convert the age in milliseconds to years, months, and days
+        const ageInYears = Math.ceil(ageInMs / 31536000000); // 1 year = 31536000000 milliseconds
+        const ageInMonths = Math.ceil((ageInMs % 31536000000) / 2628000000); // 1 month = 2628000000 milliseconds
+        const ageInDays = Math.ceil(((ageInMs % 31536000000) % 2628000000) / 86400000); // 1 day = 86400000 milliseconds
+
+        // Format the age as years, months, and days
+        const age = `${ageInYears} years, ${ageInMonths} months, and ${ageInDays} days`;
+			document.getElementById("age").value = age;
+		}
+	</script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		h2 {
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		
+		form {
+			max-width: 600px;
+			margin: auto;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		input[type=text], input[type=email], input[type=password], select, textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 3px;
+			box-sizing: border-box;
+			background-color: #fff;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		}
+		
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+			color: #fff;
+		}
+		
+		@media screen and (max-width: 600px) {
+			form {
+				padding: 10px;
+			}
+		}
+
+		.calculate-age {
+			display: inline-block;
+		}
+		/***************************************************************/
+		.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+		
+			</style>
+</head>
+<body>
+	<h2>Registration Form</h2>
+	<form name="registrationForm" onsubmit="return validateForm()">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter your full name">
+		
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email">
+		
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" placeholder="Enter your password">
+		
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob">
+		<button type="button" class="calculate-age" onclick="calculateAge()">Calculate Age</button>
+		<input type="text" id="age" name="age" placeholder="Age" readonly>
+		<button id="checkEligibility">Check Eligibility</button>
+
+		<div id="eligibilityModal" class="modal">
+		<div class="modal-content">
+			<span class="close"><input type="text" id="age" name="age" placeholder="Age" readonly></span>
+			<p id="eligibilityMessage"></p>
+		</div>
+		</div>
+		
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender">
+			<option value="">--Select--</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+		<div class="form-group">
+			<label for="electives">Choose your electives (select multiple):</label>
+			<select name="electives" id="electives" class="form-control" multiple>
+			  <option value="option1">Option 1</option>
+			  <option value="option2">Option 2</option>
+			  <option value="option3">Option 3</option>
+			  <option value="option4">Option 4</option>
+			  <option value="option5">Option 5</option>
+			  <option value="option6">Option 6</option>
+			</select>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="class_choice">Choose your class:</label>
+			<select name="class_choice" id="class_choice" class="form-control">
+			  <option value="class1">Class 1</option>
+			  <option value="class2">Class 2</option>
+			  <option value="class3">Class 3</option>
+			  <option value="class4">Class 4</option>
+			</select>
+		  </div>
+		
+		<label for="declaration">Declaration:</label>
+		<textarea id="declaration" name="declaration" rows="4" placeholder="Type your declaration here"></textarea>
+		
+		<input type="submit" value="Submit">
+	</form>
+	<script>// Get the modal
+		var modal = document.getElementById("eligibilityModal");
+		
+		// Get the button that opens the modal
+		var eligibilityButton = document.getElementById("checkEligibility");
+		
+		// Get the <span> element that closes the modal
+		var closeSpan = document.getElementsByClassName("close")[0];
+		
+		// When the user clicks the button, open the modal 
+		eligibilityButton.onclick = function() {
+		  var ageInDays = calculateAgeInDays(); // Call the function to calculate age in days
+		  var eligibilityMessage = determineEligibility(ageInDays); // Call the function to determine eligibility
+		  document.getElementById("eligibilityMessage").innerHTML = eligibilityMessage;
+		  modal.style.display = "block";
+		}
+		
+		// When the user clicks on <span> (x), close the modal
+		closeSpan.onclick = function() {
+		  modal.style.display = "none";
+		}
+		
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+		
+		// Function to calculate age in days
+		function calculateAgeInDays() {
+		  var today = new Date();
+		  var birthdate = new Date(document.getElementById("birthdate").value);
+		  var ageInMilliseconds = today - birthdate;
+		  var ageInDays = Math.floor(ageInMilliseconds / 86400000); // Number of milliseconds in a day
+		  return ageInDays;
+		}
+		
+		// Function to determine eligibility based on age in days
+		function determineEligibility(ageInDays) {
+		  var ageInYears = Math.floor(ageInDays / 365);
+		  var ageInMonths = Math.floor((ageInDays % 365) / 30);
+		  var ageInRemainingDays = ageInDays - ageInYears * 365 - ageInMonths * 30;
+		  
+		  // Check eligibility based on age in years, months, and days
+		  if (ageInYears >= 18) {
+			return "Congratulations! You are eligible to apply.";
+		  } else {
+			return "Sorry, you are not eligible to apply.";
+		  }
+		}
+		</script>
+</body>
+</html>

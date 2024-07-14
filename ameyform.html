@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+/*     
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button[type="submit"],
+    button[type="button"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover,
+    button[type="button"]:hover {
+      background-color: #45a049;
+    } */
+    form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border: 2px solid #999;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before {
+  background-color: #333;
+  border-color: #333;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555; }
+
+
+  </style>
+</head>
+<body>
+  <form>
+    <label for="full-name">Full Name:</label>
+    <input type="text" id="full-name" name="full-name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="date-of-birth">Date of Birth:</label>
+    <input type="date" id="date-of-birth" name="date-of-birth" required>
+
+    <fieldset>
+        <legend>Elective Subjects (choose two):</legend>
+        <div>
+          <input type="radio" id="it-project-management" name="elective-subjects[]" value="it-project-management">
+          <label for="it-project-management">IT Project Management</label>
+        </div>
+        <div>
+          <input type="radio" id="ethical-hacking" name="elective-subjects[]" value="ethical-hacking">
+          <label for="ethical-hacking">Ethical Hacking</label>
+        </div>
+        <div>
+          <input type="radio" id="financial-management" name="elective-subjects[]" value="financial-management">
+          <label for="financial-management">Financial Management</label>
+        </div>
+        <div>
+          <input type="radio" id="design-thinking" name="elective-subjects[]" value="design-thinking">
+          <label for="design-thinking">Design Thinking</label>
+        </div>
+      </fieldset>
+      
+    
+
+
+
+    <label for="class">Class:</label>
+    <input type="text" id="class" name="class" required>
+
+    <label for="declaration">
+      <input type="checkbox" id="declaration" name="declaration" required>
+
+    </label>
+
+    <label for="calculate-age">
+      <button type="button" id="calculate-age">Calculate Age</button>
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function calculateAge() {
+      const today = new Date();
+      const birthDate = new Date(document.getElementById('date-of-birth').value);
+      const diffInMilliseconds = today - birthDate;
+      const years = Math.floor(diffInMilliseconds / 1000 / 60 / 60 / 24 / 365);
+      const months = Math.floor(diffInMilliseconds / 1000 / 60 / 60 / 24 / 30) % 12;
+      const days = Math.floor(diffInMilliseconds / 1000 / 60 / 60 / 24) % 30;
+      const age = years + ' years ' + months + ' months ' + days + ' days';
+      alert(age);
+    }
+
+    
+    const MAX_ELECTIVES = 2; // Maximum number of electives the user can select
+
+const electives = document.querySelectorAll('input[name="elective-subjects[]"]');
+let selectedElectives = []; // Array to keep track of the selected electives
+
+// Add event listeners to each elective radio button
+electives.forEach(elective => {
+  elective.addEventListener('change', () => {
+    if (elective.checked) {
+      // If the user has already selected two electives, uncheck the oldest one
+      if (selectedElectives.length >= MAX_ELECTIVES) {
+        selectedElectives.shift().checked = false;
+      }
+      selectedElectives.push(elective);
+    } else {
+      selectedElectives = selectedElectives.filter(e => e !== elective);
+    }
+  });
+});
+
+function validateForm() {
+  // Check that the user has selected exactly two elective subjects
+  if (selectedElectives.length !== MAX_ELECTIVES) {
+    alert('Please select exactly two elective subjects.');
+    return false;
+  }
+  
+  // Add the elective subjects to the form data
+  const formData = new FormData(document.querySelector('form'));
+  formData.set('elective-subject-1', selectedElectives[0].value);
+  formData.set('elective-subject-2', selectedElectives[1].value);
+  
+//   // Send the form data to the backend using fetch()
+//   fetch('/submit-form', {
+//     method: 'POST',
+//     body: formData
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     // Handle the response from the server
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
+}
+
+document.querySelector('form').addEventListener('submit', validateForm);
+
+
+
+document.getElementById('calculate-age').addEventListener('click', calculateAge);
+
+  </script>
+</body>
+</html>  

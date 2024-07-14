@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculate Age</title>
+  </head>
+  <body>
+    <label for="dob">Enter your date of birth:</label>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <p id="result"></p>
+    <script>
+      function calculateAge() {
+        // Get the date of birth entered by the user
+        const dob = new Date(document.getElementById("dob").value);
+
+        // Check if the date of birth is valid
+        if (isNaN(dob.getTime())) {
+          document.getElementById("result").textContent = "Invalid date of birth entered. Please enter a valid date.";
+          return;
+        }
+
+        // Calculate the difference between the current date and the date of birth in milliseconds
+        const ageInMs = Date.now() - dob.getTime();
+
+        // Convert the age in milliseconds to years, months, and days
+        const ageInYears = Math.floor(ageInMs / 31536000000); // 1 year = 31536000000 milliseconds
+        const ageInMonths = Math.floor((ageInMs % 31536000000) / 2628000000); // 1 month = 2628000000 milliseconds
+        const ageInDays = Math.floor(((ageInMs % 31536000000) % 2628000000) / 86400000); // 1 day = 86400000 milliseconds
+
+        // Format the age as years, months, and days
+        const age = `${ageInYears} years, ${ageInMonths} months, and ${ageInDays} days`;
+
+        // Display the age on the web page
+        document.getElementById("result").textContent = `Your age is ${age}.`;
+      }
+    </script>
+  </body>
+</html>

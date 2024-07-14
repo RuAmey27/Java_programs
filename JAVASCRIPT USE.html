@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Display Example</title>
+  </head>
+  <body>
+    <script>
+      // Define a variable with some data
+      let names = ["Alice", "Bob", "Charlie"];
+
+      // Display the data using alert
+      alert("The names are: " + names.join(", "));
+
+      // Display the data using console.log
+      console.log("The names are: " + names.join(", "));
+
+      // Display the data using document.write
+      document.write("<p>The names are: " + names.join(", ") + "</p>");
+
+      // Display the data using innerHTML
+      let output = "<ul>";
+      for (let i = 0; i < names.length; i++) {
+        output += "<li>" + names[i] + "</li>";
+      }
+      output += "</ul>";
+      document.getElementById("myList").innerHTML = output;
+    </script>
+
+    <div id="myList"></div>
+  </body>
+</html>

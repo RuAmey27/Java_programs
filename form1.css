@@ -1,0 +1,30 @@
+
+div {
+        width: 300px;
+        border: 15px solid green;
+        padding: 90px;
+        margin: 20px;
+      }
+      @media only screen and (max-width: 1280px){
+      body{
+        padding: 270px;
+        margin: 20px;
+        align-self: center;
+        align-content: center;
+        border: 15px solid rgb(255, 43, 1);
+        background-color: #f6fe02;
+        align-content: center;
+        }
+      }
+    
+      @media only screen and (max-width: 700px) {
+        body{
+          padding: 120px;
+          margin: 20px;
+          align-self: center;
+          align-content: center;
+          border: 15px solid rgb(255, 43, 1);
+          background-color: #f6fe02;
+          align-content: center;
+          }
+      }

@@ -1,0 +1,632 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "BTech",
+      "request": "launch",
+      "mainClass": "BTech",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "prio_trial",
+      "request": "launch",
+      "mainClass": "prio_trial",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "PriorityScheduling",
+      "request": "launch",
+      "mainClass": "OS_project.PriorityScheduling",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "SchedulingAlgorithms",
+      "request": "launch",
+      "mainClass": "OS_project.SchedulingAlgorithms",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "ProducerConsumer",
+      "request": "launch",
+      "mainClass": "OS_project.ProducerConsumer",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "BankersAlgorithmExample",
+      "request": "launch",
+      "mainClass": "OS_project.BankersAlgorithmExample",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "LRUPageReplacementAlgorithm",
+      "request": "launch",
+      "mainClass": "OS_project.LRUPageReplacementAlgorithm",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "FIFOPageReplacementAlgorithm",
+      "request": "launch",
+      "mainClass": "OS_project.FIFOPageReplacementAlgorithm",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "FixedPartitionAllocation",
+      "request": "launch",
+      "mainClass": "OS_project.FixedPartitionAllocation",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "amey",
+      "request": "launch",
+      "mainClass": "amey",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Process",
+      "request": "launch",
+      "mainClass": "Process",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "OS",
+      "request": "launch",
+      "mainClass": "OS",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "PreemptiveSJF",
+      "request": "launch",
+      "mainClass": "PreemptiveSJF",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "LinkedList",
+      "request": "launch",
+      "mainClass": "LinkedList",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "ame",
+      "request": "launch",
+      "mainClass": "ame",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Main1",
+      "request": "launch",
+      "mainClass": "Main1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Dog",
+      "request": "launch",
+      "mainClass": "Dog",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Square",
+      "request": "launch",
+      "mainClass": "Square",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Demo1",
+      "request": "launch",
+      "mainClass": "Demo1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Areaachal",
+      "request": "launch",
+      "mainClass": "Areaachal",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "ISE2c",
+      "request": "launch",
+      "mainClass": "ISE2c",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "TSP2",
+      "request": "launch",
+      "mainClass": "TSP2",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "TSP1",
+      "request": "launch",
+      "mainClass": "TSP1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "TSP",
+      "request": "launch",
+      "mainClass": "TSP",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "FileNotFoundExceptionExample2",
+      "request": "launch",
+      "mainClass": "FileNotFoundExceptionExample2",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "exception",
+      "request": "launch",
+      "mainClass": "exception",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "JavaExceptionExample",
+      "request": "launch",
+      "mainClass": "JavaExceptionExample",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "leetcode",
+      "request": "launch",
+      "mainClass": "leetcode",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Achal",
+      "request": "launch",
+      "mainClass": "Achal",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch External Terminal",
+      "request": "launch",
+      "console": "externalTerminal",
+      "mainClass": ""
+    },
+    {
+      "type": "java",
+      "name": "Attach",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": "<debug port of the debuggee>"
+    },
+    {
+      "type": "java",
+      "name": "MyThread",
+      "request": "launch",
+      "mainClass": "MyThread",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "SIMPLE",
+      "request": "launch",
+      "mainClass": "SIMPLE",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Calculator_1",
+      "request": "launch",
+      "mainClass": "Calculator_1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Calculator",
+      "request": "launch",
+      "mainClass": "Calculator",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Calculator_GUI",
+      "request": "launch",
+      "mainClass": "Calculator_GUI",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Binary_Search",
+      "request": "launch",
+      "mainClass": "Binary_Search",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "gui1",
+      "request": "launch",
+      "mainClass": "gui1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Myframe",
+      "request": "launch",
+      "mainClass": "Myframe",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "javapr",
+      "request": "launch",
+      "mainClass": "javapr",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "RegistrationForm",
+      "request": "launch",
+      "mainClass": "RegistrationForm",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "CalculatorGUI",
+      "request": "launch",
+      "mainClass": "CalculatorGUI",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Base1",
+      "request": "launch",
+      "mainClass": "Base1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Base",
+      "request": "launch",
+      "mainClass": "Base",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Employee",
+      "request": "launch",
+      "mainClass": "Employee",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_8",
+      "request": "launch",
+      "mainClass": "java_8",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch DollarToRupeeConverter",
+      "request": "launch",
+      "mainClass": "DollarToRupeeConverter",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_6",
+      "request": "launch",
+      "mainClass": "java_6",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch circle",
+      "request": "launch",
+      "mainClass": "circle",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Codechef",
+      "request": "launch",
+      "mainClass": "Codechef",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch classwork_2",
+      "request": "launch",
+      "mainClass": "classwork_2",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch classwork_1",
+      "request": "launch",
+      "mainClass": "classwork_1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch GetInputFromUser",
+      "request": "launch",
+      "mainClass": "GetInputFromUser",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch FahrenheitToCelsius",
+      "request": "launch",
+      "mainClass": "FahrenheitToCelsius",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_4",
+      "request": "launch",
+      "mainClass": "java_4",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Hello",
+      "request": "launch",
+      "mainClass": "Hello",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_3",
+      "request": "launch",
+      "mainClass": "java_3",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch javacl",
+      "request": "launch",
+      "mainClass": "javacl",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch grade",
+      "request": "launch",
+      "mainClass": "grade",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Pragyaa",
+      "request": "launch",
+      "mainClass": "Pragyaa",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch PragyaGrade",
+      "request": "launch",
+      "mainClass": "PragyaGrade",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch PragyaaGrade",
+      "request": "launch",
+      "mainClass": "PragyaaGrade",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestStudent2",
+      "request": "launch",
+      "mainClass": "TestStudent2",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch ASCIIVAL",
+      "request": "launch",
+      "mainClass": "ASCIIVAL",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch arrayadd",
+      "request": "launch",
+      "mainClass": "arrayadd",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch calculator",
+      "request": "launch",
+      "mainClass": "calculator",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch printfuns",
+      "request": "launch",
+      "mainClass": "printfuns",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch switchcas",
+      "request": "launch",
+      "mainClass": "switchcas",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch PermuteString",
+      "request": "launch",
+      "mainClass": "PermuteString",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch pattern",
+      "request": "launch",
+      "mainClass": "pattern",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch Frequency",
+      "request": "launch",
+      "mainClass": "Frequency",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch ArmstsrongNumberExample",
+      "request": "launch",
+      "mainClass": "ArmstsrongNumberExample",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch PalindromeExample2",
+      "request": "launch",
+      "mainClass": "PalindromeExample2",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrimeExample2",
+      "request": "launch",
+      "mainClass": "PrimeExample2",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrimeExample3",
+      "request": "launch",
+      "mainClass": "PrimeExample3",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch FibonacciExample1",
+      "request": "launch",
+      "mainClass": "FibonacciExample1",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
+      "name": "Launch A",
+      "request": "launch",
+      "mainClass": "A",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "lldb",
+      "request": "attach",
+      "name": "Attach",
+      "program": "${"
+    },
+    {
+      "type": "pwa-msedge",
+      "name": "Launch Microsoft Edge",
+      "request": "launch",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222"
+      ],
+      "url": "c:\\Users\\hp\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.1\\out\\startpage\\index.html",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "type": "pwa-msedge",
+      "name": "Launch Microsoft Edge in headless mode",
+      "request": "launch",
+      "runtimeArgs": [
+        "--headless",
+        "--remote-debugging-port=9222"
+      ],
+      "url": "c:\\Users\\hp\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.1\\out\\startpage\\index.html",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "type": "vscode-edge-devtools.debug",
+      "name": "Open Edge DevTools",
+      "request": "attach",
+      "url": "c:\\Users\\hp\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.1\\out\\startpage\\index.html",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/java programming",
+      "program": "d:/java programming/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Edge Headless and attach DevTools",
+      "configurations": [
+        "Launch Microsoft Edge in headless mode",
+        "Open Edge DevTools"
+      ]
+    },
+    {
+      "name": "Launch Edge and attach DevTools",
+      "configurations": [
+        "Launch Microsoft Edge",
+        "Open Edge DevTools"
+      ]
+    }
+  ]
+}

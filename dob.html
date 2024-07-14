@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculate Age</title>
+  </head>
+  <body>
+    <label for="dob">Enter your date of birth:</label>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <p id="result"></p>
+    <script>
+      function calculateAge() {
+        // Get the date of birth entered by the user
+        const dob = new Date(document.getElementById("dob").value);
+
+        // Calculate the difference between the current date and the date of birth in milliseconds
+        const ageInMs = Date.now() - dob.getTime();
+
+        // Convert the age in milliseconds to years
+        const ageInYears = new Date(ageInMs).getFullYear() - 1970;
+
+        // Display the age on the web page
+        document.getElementById("result").textContent = `Your age is ${ageInYears} years.`;
+      }
+    </script>
+  </body>
+</html>

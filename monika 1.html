@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script>
+		function validateForm() {
+			var name = document.forms["registrationForm"]["name"].value;
+			var email = document.forms["registrationForm"]["email"].value;
+			var password = document.forms["registrationForm"]["password"].value;
+			var dob = document.forms["registrationForm"]["dob"].value;
+			var gender = document.forms["registrationForm"]["gender"].value;
+			var declaration = document.forms["registrationForm"]["declaration"].value;
+
+			if (name == "") {
+				alert("Name must be filled out");
+				return false;
+			}
+
+			if (email == "") {
+				alert("Email must be filled out");
+				return false;
+			}
+
+			if (password == "") {
+				alert("Password must be filled out");
+				return false;
+			}
+
+			if (dob == "") {
+				alert("Date of Birth must be filled out");
+				return false;
+			}
+
+			if (gender == "") {
+				alert("Gender must be selected");
+				return false;
+			}
+
+			if (declaration == "") {
+				alert("Declaration must be filled out");
+				return false;
+			}
+
+			return true;
+		}
+
+		function calculateAge() {
+			const dob = new Date(document.getElementById("dob").value);
+
+			// Check if the date of birth is valid
+			if (isNaN(dob.getTime())) {
+				document.getElementById("result").textContent = "Invalid date of birth entered. Please enter a valid date.";
+				return;
+			}
+
+			// Calculate the difference between the current date and the date of birth in milliseconds
+			const ageInMs = Date.now() - dob.getTime();
+
+			// Convert the age in milliseconds to years, months, and days
+			const ageInYears = Math.ceil(ageInMs / 31536000000); // 1 year = 31536000000 milliseconds
+			const ageInMonths = Math.ceil((ageInMs % 31536000000) / 2628000000); // 1 month = 2628000000 milliseconds
+			const ageInDays = Math.ceil(((ageInMs % 31536000000) % 2628000000) / 86400000); // 1 day = 86400000 milliseconds
+
+			// Format the age as years, months, and days
+			const age = `${ageInYears} years, ${ageInMonths} months, and ${ageInDays} days`;
+			document.getElementById("age").value = age;
+		}
+	</script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		h2 {
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		form {
+			max-width: 600px;
+			margin: auto;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=password],
+		select,
+		textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 3px;
+			box-sizing: border-box;
+			background-color: #fff;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+			color: #fff;
+		}
+
+		@media screen and (max-width: 600px) {
+			form {
+				padding: 10px;
+			}
+		}
+
+		.calculate-age {
+			display: inline-block;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Registration Form</h2>
+	<form name="registrationForm" onsubmit="return validateForm()">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter your full name">
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email">
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" placeholder="Enter your password">
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob">
+		<button type="button" class="calculate-age" onclick="calculateAge()">Calculate Age</button>
+		<input type="text" id="age" name="age" placeholder="Age" readonly>
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender">
+			<option value="">--Select--</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+		<div class="form-group">
+			<label for="electives">Choose your electives (select multiple):</label>
+			<input type="checkbox">application development</input> <br>
+			<input type="checkbox">web development</input> <br>
+			<input type="checkbox">full stack wed development</input> <br>
+			<input type="checkbox">backend wed development</input> <br>
+		</div>
+
+		<div class="form-group">
+			<label for="class_choice">Choose your class:</label>
+			<select name="class_choice" id="class_choice" class="form-control">
+				<option value="class1">Class 1</option>
+				<option value="class2">Class 2</option>
+				<option value="class3">Class 3</option>
+				<option value="class4">Class 4</option>
+			</select>
+		</div>
+
+		
+
+		<label for="declaration">Declaration:</label>
+		<textarea id="declaration" name="declaration" rows="4" placeholder="Type your declaration here"></textarea>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

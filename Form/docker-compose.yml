@@ -1,0 +1,32 @@
+version: '3'
+services:
+  # MongoDB
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  # Express.js (Node.js backend)
+  express:
+    build: /backend
+    container_name: express-app
+    ports:
+      - "3001:3001"
+    environment:
+      MONGO_URI: mongodb://mongo:27017/yourdbname
+    depends_on:
+      - mongo
+
+  # React.js (Node.js frontend)
+  react:
+    build: /frontend
+    container_name: react-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - express
+    volumes:
+      - mongo-data:
