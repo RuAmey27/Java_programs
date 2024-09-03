@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "inplacereverse",
+      "request": "launch",
+      "mainClass": "inplacereverse",
+      "projectName": "java programming_1a648854"
+    },
+    {
+      "type": "java",
       "name": "BTech",
       "request": "launch",
       "mainClass": "BTech",
